@@ -1,0 +1,54 @@
+{
+    "id": "tools/cache/ccache",
+    "version": "4.8.3",
+    "description": "Ccache is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again.",
+    "summary": "A fast compiler cache for C and C++ (Also supports ISPC, CUDA, and Objective-C).",
+    "contacts": {
+        "Chip Collier": {
+            "email": "chip@kopernikusauto.com",
+            "role": "publisher"
+        },
+        "ninja-build": {
+            "email": "ccache@ccache.dev",
+            "role": "originator"
+        }
+    },
+    "demands": {
+        "windows": {
+            "install": {
+                "unzip": "https://github.com/ccache/ccache/releases/download/v4.8.3/ccache-4.8.3-windows-x86_64.zip",
+                "strip": 1
+            },
+            "exports": {
+                "tools": {
+                    "ccache": "ccache.exe"
+                },
+                "paths": {
+                    "PATH": "."
+                }
+            }
+        },
+        "osx": {
+            "install": {
+                "untar": "https://github.com/ccache/ccache/releases/download/v4.8.3/ccache-4.8.3-darwin.tar.gz",
+                "strip": 1
+            }
+        },
+        "linux": {
+            "install": {
+                "untar": "https://github.com/ccache/ccache/releases/download/v4.8.3/ccache-4.8.3-linux-x86_64.tar.xz",
+                "strip": 1
+            }
+        },
+        "not windows": {
+            "exports": {
+                "tools": {
+                    "ccache": "ccache"
+                },
+                "paths": {
+                    "PATH": "."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "id": "tools/infineon/aurix-flasher",
+    "version": "1.0.8",
+    "description": "AURIX Flasher. Windows only.",
+    "summary": "Utility to flash AURIX prototype devices via the on-board Infineon miniWiggler USB port.",
+    "contacts": {
+        "Chip Collier": {
+            "email": "chip@kopernikusauto.com",
+            "role": "publisher"
+        }
+    },
+    "demands": {
+        "windows": {
+            "install": {
+                "unzip": "https://github.com/kopernikusauto/vcpkg-artifacts/releases/download/v2023-11-20/aurix-flasher-1.0.8.zip"
+            },
+            "exports": {
+                "paths": {
+                    "PATH": "."
+                },
+                "tools": {
+                    "AurixFlasher": "AurixFlasher.exe"
+                }
+            }
+        }
+    }
+}

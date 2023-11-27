@@ -1,0 +1,24 @@
+{
+    "id": "compilers/tricore/tricore-gcc",
+    "version": "11.3.1",
+    "description": "The uncertified GNU Toolchain for tricore provided by Infineon. Windows only.",
+    "summary": "GCC compiler for Tricore CPUs.",
+    "contacts": {
+        "Chip Collier": {
+            "email": "chip@kopernikusauto.com",
+            "role": "publisher"
+        }
+    },
+    "demands": {
+        "windows": {
+            "install": {
+                "unzip": "https://github.com/kopernikusauto/vcpkg-artifacts/releases/download/v2023-11-27/tricore-gcc-11.3.1.zip"
+            },
+            "exports": {
+                "paths": {
+                    "PATH": "bin"
+                }
+            }
+        }
+    }
+}
