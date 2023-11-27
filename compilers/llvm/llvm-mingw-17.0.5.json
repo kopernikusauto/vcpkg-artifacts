@@ -1,0 +1,34 @@
+{
+    "id": "compilers/llvm/llvm-mingw",
+    "version": "17.0.5",
+    "description": "LLVM 17.0.5 and a minimal gnu environment for Windows development. (2023 11 14)",
+    "summary": "LLVM toolchain for Windows x64, i686, armv7, and armv8.",
+    "contacts": {
+        "Chip Collier": {
+            "email": "chip@kopernikusauto.com",
+            "role": "publisher"
+        }
+    },
+    "demands": {
+        "windows": {
+            "install": {
+                "unzip": "https://github.com/kopernikusauto/vcpkg-artifacts/releases/download/v2023-11-27/llvm-mingw-20231114-ucrt-x86_64.zip",
+                "strip": 1
+            },
+            "exports": {
+                "tools": {
+                    "clang": "bin/clang.exe",
+                    "clang++": "bin/clang++.exe",
+                    "clangd": "bin/clangd.exe",
+                    "clang-format": "bin/clang-format.exe",
+                    "lldb-vscode": "bin/lldb-vscode.exe",
+                    "lldb": "bin/lldb.exe",
+                    "dlltool": "bin/dlltool.exe"
+                },
+                "paths": {
+                    "PATH": "bin"
+                }
+            }
+        }
+    }
+}
